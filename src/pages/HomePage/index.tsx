@@ -5,6 +5,7 @@ import GetTransactions from "./components/04_GetTransactions";
 import GetAnalysis from "./components/05_GetAnalysis";
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
+import DataControl from "./DataControl";
 
 const HomePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -20,7 +21,7 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="hidden md:block w-screen h-screen px-[10vw]">
+      <div className="hidden md:block w-screen h-screen px-[5vw]">
         {currentStep === "1" && <Landing />}
         {currentStep === "2" && <GetCode />}
         {currentStep === "3" && <GetId />}
@@ -31,6 +32,8 @@ const HomePage = () => {
       <div className="md:hidden flex w-screen h-screen items-center justify-center text-center px-4">
         <h1>You can't view this on a mobile device. Switch to your PC.</h1>
       </div>
+
+      <DataControl />
     </>
   );
 };
