@@ -1,7 +1,4 @@
-import { IFrequencyTable, IFrequencyDescriptionTable } from "../types";
-import { frequencyTest } from "../data";
-
-export const organizeSalaryCredits = (list: IFrequencyTable) => {
+export const organizeSalaryCredits = () => {
   return [
     {
       name: "the most common",
